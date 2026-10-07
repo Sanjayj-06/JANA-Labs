@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
 import './styles.css';
-import './join.css';
 
 const teamNavItems = [
   { label: 'About', href: '/#about' },
@@ -12,31 +10,6 @@ const teamNavItems = [
 
 function TeamPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [formStatus, setFormStatus] = useState('idle');
-
-  const handleApplication = async (event) => {
-    event.preventDefault();
-    setFormStatus('sending');
-
-    const form = event.currentTarget;
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEAM_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      setFormStatus('configuration-error');
-      return;
-    }
-
-    try {
-      await emailjs.sendForm(serviceId, templateId, form, { publicKey });
-      form.reset();
-      setFormStatus('success');
-    } catch (error) {
-      console.error('Unable to send team application:', error);
-      setFormStatus('error');
-    }
-  };
 
   return (
     <div className="site-shell team-page">
@@ -59,7 +32,6 @@ function TeamPage() {
           <p className="eyebrow light-eyebrow"><span /> The people behind the possibilities</p>
           <h1>Built by people<br /><span>who care deeply.</span></h1>
           <div className="team-hero-meta"><span>01</span><i /> One clear Goal. A growing team of curious builders.</div>
-          <a className="hero-link team-hero-link" href="#join-team">Join the team <ArrowUpRight size={17} /></a>
         </section>
         <section className="founder-section section-pad">
           <div className="founder-image">
@@ -78,30 +50,8 @@ function TeamPage() {
             <a className="text-link team-back-link" href="/"><ArrowLeft size={17} /> Back to JANA Labs</a>
           </div>
         </section>
-        <section className="join-section section-pad" id="join-team">
-          <div className="section-label"><span>02</span><i /> Join the team</div>
-          <div className="join-heading">
-            <h2>Bring your<br /><span>curiosity.</span></h2>
-            <p>We’re always interested in meeting thoughtful people who care about the work they put into the world.</p>
-          </div>
-          <form className="contact-form join-form" onSubmit={handleApplication}>
-            <div className="join-form-grid">
-              <label>Full name<input required name="from_name" type="text" placeholder="Your name" /></label>
-              <label>Email<input required name="reply_to" type="email" placeholder="you@email.com" /></label>
-              <label>Area of interest<input required name="role" type="text" placeholder="Engineering, design, strategy..." /></label>
-              <label>Portfolio or LinkedIn<input name="portfolio" type="url" placeholder="https://..." /></label>
-            </div>
-            <label>Tell us about yourself<textarea required name="message" rows="4" placeholder="What are you curious about? What would you love to build?" /></label>
-            <button type="submit" className="submit-button" disabled={formStatus === 'sending'}>
-              {formStatus === 'sending' ? 'Sending application' : 'Send application'} <ArrowUpRight size={17} />
-            </button>
-            {formStatus === 'success' && <p className="form-success">Application received — thank you for reaching out.</p>}
-            {formStatus === 'error' && <p className="form-error">We couldn’t send your application. Please try again or email us directly.</p>}
-            {formStatus === 'configuration-error' && <p className="form-error">The application form is not configured yet. Please add the EmailJS environment variables.</p>}
-          </form>
-        </section>
       </main>
-      <footer><div className="wordmark footer-mark"><span className="wordmark-mark">J</span><span>JANA <em>Labs</em></span></div><span>Building beyond possibilities.</span><span>© 2024 JANA Labs</span></footer>
+      <footer><div className="wordmark footer-mark"><span className="wordmark-mark">J</span><span>JANA <em>Labs</em></span></div><span>Building beyond possibilities.</span><span>© 2026 JANA Labs</span></footer>
     </div>
   );
 }

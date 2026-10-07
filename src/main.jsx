@@ -22,7 +22,7 @@ function App() {
     <div className="site-shell">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="JANA Labs home">
-          <span className="wordmark-mark">J</span>
+          
           <span>JANA <em>Labs</em></span>
         </a>
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
@@ -46,15 +46,15 @@ function App() {
           <div className="hero-content">
             <p className="eyebrow light-eyebrow"><span /> Technology & Product Engineering</p>
             <div className="logo-frame">
-              <img src="/jana-logo/janalogo.png" alt="JANA Labs" />
+              <img src="/jana-logo/jana.png" alt="JANA Labs" />
             </div>
             <h1>Building the <span>next Gen</span> of<br /> Engineering Solutions</h1>
             <p className="hero-copy">We turn complex challenges into clear, capable products that move people and businesses forward.</p>
             <a className="hero-link" href="#about">Discover our approach <MoveUpRight size={17} /></a>
           </div>
-          <div className="scroll-cue"><span /> Scroll to explore</div>
+          
         </section>
-
+        
         <section className="intro-section section-pad" id="about">
           <div className="section-label"><span>01</span><i /> About JANA Labs</div>
           <div className="intro-grid">
@@ -113,6 +113,11 @@ function App() {
               <div className="availability"><span /> Currently accepting select projects</div>
             </div>
             <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="join-invite-inline">
+                <div className="section-label light-label"><span>04</span><i /> Join the team</div>
+                <h3>Want to build what <span>comes next?</span></h3>
+                <a className="email-link" href="mailto:director.janalabs@gmail.com"><Mail size={17} /> director.janalabs@gmail.com</a>
+              </div>
               <label>Name<input required type="text" placeholder="Your name" /></label>
               <label>Email<input required type="email" placeholder="you@company.com" /></label>
               <label>How can we help?<textarea required rows="3" placeholder="A few words about your project..." /></label>
@@ -122,7 +127,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer><div className="wordmark footer-mark"><span className="wordmark-mark">J</span><span>JANA <em>Labs</em></span></div><span>Building beyond possibilities.</span><span>© 2024 JANA Labs</span></footer>
+      <footer><div className="wordmark footer-mark"><span className="wordmark-mark">J</span><span>JANA <em>Labs</em></span></div><span>Building beyond possibilities.</span><span>© 2026 JANA Labs</span></footer>
     </div>
   );
 }
