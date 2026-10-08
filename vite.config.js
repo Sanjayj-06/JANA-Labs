@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(rootDirectory, 'index.html'),
         team: resolve(rootDirectory, 'team.html'),
+        teams: resolve(rootDirectory, 'teams/index.html'),
       },
     },
   },
