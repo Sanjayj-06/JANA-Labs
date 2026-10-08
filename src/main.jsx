@@ -6,7 +6,7 @@ import janaLogo from '../jana-logo/jana.png';
 
 const navItems = [
   { label: 'About', href: '#about' },
-  { label: 'Team', href: '/team.html' },
+  { label: 'Team', href: '/teams' },
   { label: 'Contact', href: '#contact' },
 ];
 

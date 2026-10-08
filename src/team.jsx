@@ -4,7 +4,7 @@ import './styles.css';
 
 const teamNavItems = [
   { label: 'About', href: '/#about' },
-  { label: 'Team', href: '/team.html' },
+  { label: 'Team', href: '/teams' },
   { label: 'Contact', href: '/#contact' },
 ];
 
