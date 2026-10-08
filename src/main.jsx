@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, Check, Mail, Menu, MoveUpRight, X } from 'lucide-react';
 import './styles.css';
+import janaLogo from '../jana-logo/jana.png';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -46,7 +47,7 @@ function App() {
           <div className="hero-content">
             <p className="eyebrow light-eyebrow"><span /> Technology & Product Engineering</p>
             <div className="logo-frame">
-              <img src="/jana-logo/jana.png" alt="JANA Labs" />
+              <img src={janaLogo} alt="JANA Labs" />
             </div>
             <h1>Building the <span>next Gen</span> of<br /> Engineering Solutions</h1>
             <p className="hero-copy">We turn complex challenges into clear, capable products that move people and businesses forward.</p>
