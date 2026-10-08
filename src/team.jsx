@@ -15,7 +15,6 @@ function TeamPage() {
     <div className="site-shell team-page">
       <header className="site-header">
         <a className="wordmark" href="/" aria-label="JANA Labs home">
-          <span className="wordmark-mark">J</span>
           <span>JANA <em>Labs</em></span>
         </a>
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
