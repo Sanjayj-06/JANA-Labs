@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
 import './styles.css';
+import founderPhoto from '../sanjay.jpeg';
 
 const teamNavItems = [
   { label: 'About', href: '/#about' },
@@ -34,7 +35,9 @@ function TeamPage() {
         </section>
         <section className="founder-section section-pad">
           <div className="founder-image">
-            <div className="portrait-placeholder"><span>J</span></div>
+            <div className="portrait-placeholder">
+              <img src={founderPhoto} alt="Sanjay Jayakumar, founder of JANA Labs" />
+            </div>
             <div className="image-caption"><span>Founder profile</span><span>JANA / 01</span></div>
             <div className="profile-tags"><span>Strategy</span><span>Engineering</span><span>Vision</span></div>
           </div>

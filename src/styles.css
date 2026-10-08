@@ -51,6 +51,7 @@
  .founder-copy blockquote{font-size:28px;margin:32px 0 24px}
  .founder-copy>p{font-size:13px}
  .portrait-placeholder span{font-size:130px}
+ .portrait-placeholder img{width:100%;height:100%;display:block;object-fit:cover}
  footer{font-size:9px}
 }
 
